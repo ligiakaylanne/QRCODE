@@ -3,7 +3,7 @@ const slides = document.querySelectorAll('.carousel-slide');
 
 function showSlide(index) {
     slides.forEach((slide, i) => {
-        slide.style.display = i === index ? 'block' : 'none';
+        slide.style.transform = `translateX(-${index * 100}%)`;
     });
 }
 

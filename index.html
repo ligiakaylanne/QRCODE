@@ -5,72 +5,106 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bem-vindo ao Diário do Bebê</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(to right, #8b4513, #ffebcd, #8b4513); /* Gradiente de fundo */
+            text-align: center;
+            font-family: 'Arial', sans-serif; /* Fonte mais moderna */
+        }
+        .photo-container {
+            position: relative;
+            display: inline-block;
+            margin-top: 20px;
+            animation: fadeIn 1s ease-in-out; /* Animação de entrada da foto */
+        }
+        img {
+            width: 80%;
+            max-width: 400px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra na imagem */
+            transition: transform 0.3s; /* Transição suave no hover */
+        }
+        img:hover {
+            transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+        }
+        .photo-title {
+            position: absolute;
+            top: 10px; /* Ajusta a posição para cima */
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(0, 0, 0, 0.6); /* Cor de fundo mais escura para contraste */
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 22px; /* Tamanho da fonte aumentado */
+            font-weight: bold;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Sombra no título */
+            animation: fadeIn 1s ease-in-out; /* Animação de entrada do título */
+        }
+        .buttons {
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            gap: 15px; /* Espaço entre os botões */
+            animation: fadeIn 1.5s ease-in-out; /* Animação de entrada dos botões */
+        }
+        button {
+            padding: 12px 25px;
+            font-size: 18px;
+            margin: 5px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Sombra nos botões */
+        }
+        .yes-button {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .yes-button:hover {
+            background-color: #45a049;
+            transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+        }
+        .no-button {
+            background-color: #f44336;
+            color: white;
+            cursor: not-allowed;
+            opacity: 0.8; /* Torna o botão visualmente desativado */
+            animation: shake 1s infinite; /* Animação de balançar */
+        }
+        .no-button:hover {
+            background-color: #d32f2f; /* Mantém a cor ao passar o mouse */
+        }
+        @keyframes shake {
+            0% { transform: translateX(0); }
+            25% { transform: translateX(-15px); }
+            50% { transform: translateX(0); }
+            75% { transform: translateX(15px); }
+            100% { transform: translateX(0); }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>Bem-vindo ao Diário do Bebê</h1>
-        <p>Um presente especial para celebrar cada momento precioso do seu bebê.</p>
-    </header>
+    <div class="photo-title">Bem-vindas, Jéssica e Helena!</div>
 
-    <!-- Mensagem do Site -->
-    <section id="mensagem">
-        <h2>Por que este site?</h2>
-        <p>Criei este site para que você possa registrar e recordar cada momento especial do seu bebê de maneira fácil e carinhosa. Aqui você encontrará um carrossel de fotos para relembrar esses momentos e, se precisar de algo, pode me chamar pelo WhatsApp!</p>
-    </section>
-
-    <!-- Carrossel de Fotos -->
-    <section id="carrossel">
-        <h2>Momentos Especiais</h2>
-        <div class="carousel">
-            <div class="carousel-slide">
-                <img src="foto1.jpg" alt="Momento 1">
-            </div>
-            <div class="carousel-slide">
-                <img src="foto2.jpg" alt="Momento 2">
-            </div>
-            <div class="carousel-slide">
-                <img src="foto3.jpg" alt="Momento 3">
-            </div>
-        </div>
-        <button class="prev" onclick="prevSlide()">❮</button>
-        <button class="next" onclick="nextSlide()">❯</button>
-    </section>
-
-    <!-- Contato via WhatsApp -->
-    <section id="contato">
-        <h2>Entre em Contato</h2>
-        <p>Se precisar de qualquer coisa, não hesite em me chamar:</p>
-        <a href="https://wa.me/5511999999999" target="_blank">Ligue para Titia no WhatsApp!</a>
-    </section>
-
-    <!-- Vídeos e Áudios -->
-    <section id="media">
-        <h2>Vídeos e Áudios</h2>
-        <div class="media-container">
-            <h3>Mensagem de Família</h3>
-            <video controls>
-                <source src="video-familia.mp4" type="video/mp4">
-                Seu navegador não suporta a tag de vídeo.
-            </video>
-            <audio controls>
-                <source src="audio-mensagem.mp3" type="audio/mp3">
-                Seu navegador não suporta a tag de áudio.
-            </audio>
-        </div>
-    </section>
-
-    <!-- Mensagens de Apoio -->
-    <section id="apoio">
-        <h2>Palavras de Apoio</h2>
-        <div class="apoio-container">
-            <p><strong>Quando se sentir cansada:</strong> "Lembre-se de que você é incrível e está fazendo um trabalho maravilhoso. Tire um tempo para si mesma sempre que precisar e saiba que há pessoas ao seu redor prontas para ajudar."</p>
-            <p><strong>Quando se sentir triste:</strong> "Seja gentil consigo mesma. Às vezes, os dias podem ser difíceis, mas não se esqueça de que cada dia é uma nova oportunidade. Em tudo daí graças!"</p>
-        </div>
-    </section>
-
-    <footer>
-        <p>Feito com carinho por sua titia, Lígia!</p>
-    </footer>
+    <div class="photo-container">
+        
+        <img src="img/Helena.png" alt="Foto do Bebê">
+    </div>
+    <div class="buttons">
+        <a href="pag-principal.html"><button class="yes-button">Sim, abrir a página</button></a>
+        <button class="no-button" disabled>Não, não abrir</button>
+    </div>
 </body>
-<script src="script.js"></script>
 </html>
