@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bem-vindo ao Diário do Bebê</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Bem-vindo ao Diário do Bebê</h1>
+        <p>Um presente especial para celebrar cada momento precioso do seu bebê.</p>
+    </header>
+
+    <!-- Mensagem do Site -->
+    <section id="mensagem">
+        <h2>Por que este site?</h2>
+        <p>Criei este site para que você possa registrar e recordar cada momento especial do seu bebê de maneira fácil e carinhosa. Aqui você encontrará um carrossel de fotos para relembrar esses momentos e, se precisar de algo, pode me chamar pelo WhatsApp!</p>
+    </section>
+
+    <!-- Carrossel de Fotos -->
+    <section id="carrossel">
+        <h2>Momentos Especiais</h2>
+        <div class="carousel">
+            <div class="carousel-slide">
+                <img src="foto1.jpg" alt="Momento 1">
+            </div>
+            <div class="carousel-slide">
+                <img src="foto2.jpg" alt="Momento 2">
+            </div>
+            <div class="carousel-slide">
+                <img src="foto3.jpg" alt="Momento 3">
+            </div>
+        </div>
+        <button class="prev" onclick="prevSlide()">❮</button>
+        <button class="next" onclick="nextSlide()">❯</button>
+    </section>
+
+    <!-- Contato via WhatsApp -->
+    <section id="contato">
+        <h2>Entre em Contato</h2>
+        <p>Se precisar de qualquer coisa, não hesite em me chamar:</p>
+        <a href="https://wa.me/5511999999999" target="_blank">Ligue para Titia no WhatsApp!</a>
+    </section>
+
+    <!-- Vídeos e Áudios -->
+    <section id="media">
+        <h2>Vídeos e Áudios</h2>
+        <div class="media-container">
+            <h3>Mensagem de Família</h3>
+            <video controls>
+                <source src="video-familia.mp4" type="video/mp4">
+                Seu navegador não suporta a tag de vídeo.
+            </video>
+            <audio controls>
+                <source src="audio-mensagem.mp3" type="audio/mp3">
+                Seu navegador não suporta a tag de áudio.
+            </audio>
+        </div>
+    </section>
+
+    <!-- Mensagens de Apoio -->
+    <section id="apoio">
+        <h2>Palavras de Apoio</h2>
+        <div class="apoio-container">
+            <p><strong>Quando se sentir cansada:</strong> "Lembre-se de que você é incrível e está fazendo um trabalho maravilhoso. Tire um tempo para si mesma sempre que precisar e saiba que há pessoas ao seu redor prontas para ajudar."</p>
+            <p><strong>Quando se sentir triste:</strong> "Seja gentil consigo mesma. Às vezes, os dias podem ser difíceis, mas não se esqueça de que cada dia é uma nova oportunidade. Em tudo daí graças!"</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>Feito com carinho por sua titia, Lígia!</p>
+    </footer>
+</body>
+<script src="script.js"></script>
+</html>
