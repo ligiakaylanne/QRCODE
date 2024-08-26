@@ -29,6 +29,16 @@ h2 {
     color: #8b4513; /* Marrom escuro */
 }
 
+#conteudo {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+#mensagem, #carrossel {
+    flex: 1;
+}
+
 #carrossel {
     position: relative;
     overflow: hidden;
@@ -46,9 +56,25 @@ h2 {
     box-sizing: border-box;
 }
 
-.carousel-slide img {
+.card {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    padding: 1rem;
+}
+
+.card img {
     width: 100%;
-    border-radius: 10px;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+}
+
+.card p {
+    margin: 0.5rem 0 0;
+    font-size: 1rem;
+    color: #333;
 }
 
 button {
@@ -103,4 +129,41 @@ footer {
     color: #ffffff;
     padding: 10px;
     border-top: 5px solid #6f3f1a; /* Borda sutil */
+}
+
+#cards {
+    padding: 2rem;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card-container .card {
+    width: 300px; /* Ajuste o tamanho conforme necessário */
+    margin: 10px;
+}
+/* Adiciona estilo para o header */
+/* Adiciona estilo para o header */
+header {
+    background-color: #8b4513; /* Marrom escuro */
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+}
+
+.header-logo {
+    width: 150px; /* Ajuste o tamanho da imagem conforme necessário */
+    height: 150px; /* Mantém a altura igual à largura para garantir que a imagem seja redonda */
+    border-radius: 50%; /* Torna a imagem redonda */
+    object-fit: cover; /* Garante que a imagem cubra a área sem distorção */
+    display: block;
+    margin: 0 auto 10px; /* Centraliza a imagem e adiciona margem inferior */
+}
+
+h1 {
+    margin: 0;
 }
